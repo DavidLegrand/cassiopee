@@ -4,11 +4,14 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, "build")));
 
-app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "build", "static", "media", "waiting.jpg"));
-});
+
 app.get("/test-landing", function (req, res) {
+  console.log('there')
   res.sendFile(path.join(__dirname, "build", "index.html"));
+});
+app.get("/*", function (req, res) {
+  console.log('here')
+  res.sendFile(path.join(__dirname, "build", "static", "media", "waiting.jpg"));
 });
 
 const port = process.env.PORT || 80;

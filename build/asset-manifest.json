@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.98f49916.chunk.css",
-    "main.js": "/static/js/main.0e43b727.chunk.js",
-    "main.js.map": "/static/js/main.0e43b727.chunk.js.map",
+    "main.css": "/static/css/main.17d94a06.chunk.css",
+    "main.js": "/static/js/main.84467f12.chunk.js",
+    "main.js.map": "/static/js/main.84467f12.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.1584031b.js",
     "runtime-main.js.map": "/static/js/runtime-main.1584031b.js.map",
     "static/css/2.4c97ca4f.chunk.css": "/static/css/2.4c97ca4f.chunk.css",
@@ -12,20 +12,21 @@
     "static/js/3.10263ff0.chunk.js.map": "/static/js/3.10263ff0.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.4c97ca4f.chunk.css.map": "/static/css/2.4c97ca4f.chunk.css.map",
-    "static/css/main.98f49916.chunk.css.map": "/static/css/main.98f49916.chunk.css.map",
+    "static/css/main.17d94a06.chunk.css.map": "/static/css/main.17d94a06.chunk.css.map",
     "static/js/2.f1debdaa.chunk.js.LICENSE.txt": "/static/js/2.f1debdaa.chunk.js.LICENSE.txt",
     "static/media/index.css": "/static/media/tache2.9ff5932c.png",
     "static/media/SpyCassiopee-color.04160487.png": "/static/media/SpyCassiopee-color.04160487.png",
     "static/media/SpyCassiopee-white.f884391c.png": "/static/media/SpyCassiopee-white.f884391c.png",
     "static/media/TerreDesArts-color.76955658.png": "/static/media/TerreDesArts-color.76955658.png",
     "static/media/facade.d5a18c25.jpg": "/static/media/facade.d5a18c25.jpg",
+    "static/media/interieur.c0471ebe.jpg": "/static/media/interieur.c0471ebe.jpg",
     "static/media/terrasse.f6d08505.jpg": "/static/media/terrasse.f6d08505.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.1584031b.js",
     "static/css/2.4c97ca4f.chunk.css",
     "static/js/2.f1debdaa.chunk.js",
-    "static/css/main.98f49916.chunk.css",
-    "static/js/main.0e43b727.chunk.js"
+    "static/css/main.17d94a06.chunk.css",
+    "static/js/main.84467f12.chunk.js"
   ]
 }

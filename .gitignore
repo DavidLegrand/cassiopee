@@ -17,6 +17,7 @@
 .eslintcache
 jsconfig.json
 README.md
+/images
 
 # misc
 .DS_Store

@@ -36,6 +36,7 @@ const sanitizeBody = body => ({
   city: sanitizeString(body.city),
   achat: sanitizeString(body.achat),
   bien: sanitizeString(body.bien),
+  origine: sanitizeString(body.origine),
 })
 
 const getProspectInfo = (body) => {
@@ -74,9 +75,11 @@ const getProspectMsg = (body, prospect) => {
 
 const getConseillerMsg = (body, prospect) => {
   const text = `Un nouveau prospect a été enregistré sur la landing page Terre des Arts :
+  Origine : ${body.origine}
   ${prospect.text}
   Ceci est un email automatique, merci de ne pas répondre`;
   const html = `<p>Un nouveau prospect a été enregistré sur la landing page Terre des Arts :</p>
+  <strong>Origine : ${body.origine}</strong>
   ${prospect.html}
   <p>Ceci est un email automatique, merci de ne pas répondre</p>`;
   return { text, html }
@@ -94,7 +97,12 @@ const mailer = (body) => {
     html: prospectMsg.html,
   }, {
     to: body.email,
-    subject: 'Terre des Arts : Nouveau prospect',
+    subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
+    text: conseillerMsg.text,
+    html: conseillerMsg.html,
+  }, {
+    to: "ffischer@buenos-aires.fr",
+    subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
     text: conseillerMsg.text,
     html: conseillerMsg.html,
   }];

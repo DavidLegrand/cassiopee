@@ -95,12 +95,14 @@ const mailer = (body) => {
     subject: 'Terre des Arts : Confirmation de demande',
     text: prospectMsg.text,
     html: prospectMsg.html,
-  }, {
-    to: body.email,
-    subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
-    text: conseillerMsg.text,
-    html: conseillerMsg.html,
-  }, {
+  },
+  //  {
+  //   to: body.email,
+  //   subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
+  //   text: conseillerMsg.text,
+  //   html: conseillerMsg.html,
+  // }, 
+  {
     to: "ffischer@buenos-aires.fr",
     subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
     text: conseillerMsg.text,

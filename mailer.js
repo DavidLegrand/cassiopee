@@ -22,8 +22,12 @@ transporter.verify((err, success) => {
 
 
 function sanitizeString(str) {
-  str = str ? str.replace(/[^a-z0-9áâäàéêèëíïîìóòôöúüùûñç@ +.,_-]/gim, "") : "";
-  return str.trim();
+  try {
+    str = str ? str.replace(/[^a-z0-9áâäàéêèëíïîìóòôöúüùûñç@ +.,_-]/gim, "") : "";
+    return str.trim();
+  } catch (e) {
+    console.error(e)
+  }
 }
 
 const sanitizeBody = body => ({

@@ -13,6 +13,7 @@ const cors = require("cors")
 app.use(express.json());
 app.use(cors())
 app.use("/api/sendmail", (req, res) => {
+  console.log("/api/sendmail", req)
   mailer(req.body)
 })
 
@@ -22,5 +23,5 @@ app.get("/*", function (req, res, next) {
   res.sendFile(path.join(__dirname, "build", "index.html"));
 });
 
-const port = process.env.PORT || 443;
+const port = process.env.PORT;
 app.listen(port, () => console.log(`running on port ${port}`));

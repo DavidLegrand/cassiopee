@@ -96,12 +96,12 @@ const mailer = (body) => {
     text: prospectMsg.text,
     html: prospectMsg.html,
   },
-  //  {
-  //   to: body.email,
-  //   subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
-  //   text: conseillerMsg.text,
-  //   html: conseillerMsg.html,
-  // }, 
+  {
+    to: "contact@we-associes.com",
+    subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
+    text: conseillerMsg.text,
+    html: conseillerMsg.html,
+  },
   {
     to: "dlegrand.pro@gmail.com",
     subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),

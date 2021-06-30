@@ -109,6 +109,12 @@ const mailer = (body) => {
   //   html: conseillerMsg.html,
   // }, 
   {
+    to: "contact@we-associes.com",
+    subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
+    text: conseillerMsg.text,
+    html: conseillerMsg.html,
+  },
+  {
     to: "dlegrand.pro@gmail.com",
     subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
     text: conseillerMsg.text,

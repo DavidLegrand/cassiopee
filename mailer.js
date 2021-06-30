@@ -31,17 +31,19 @@ function sanitizeString(str) {
 }
 
 const sanitizeBody = body => ({
-  firstname: sanitizeString(body.firstname),
-  lastname: sanitizeString(body.lastname),
-  mobile_phone: sanitizeString(body.mobile_phone),
-  email: sanitizeString(body.email),
-  address: sanitizeString(body.address),
-  postal_code: sanitizeString(body.postal_code),
-  city: sanitizeString(body.city),
-  achat: sanitizeString(body.achat),
-  bien: sanitizeString(body.bien),
-  origine: sanitizeString(body.origine),
+  firstname: body.firstname ? sanitizeString(body.firstname) : "",
+  lastname: body.lastname ? sanitizeString(body.lastname) : "",
+  mobile_phone: body.mobile_phone ? sanitizeString(body.mobile_phone) : "",
+  email: body.email ? sanitizeString(body.email) : "",
+  address: body.address ? sanitizeString(body.address) : "",
+  postal_code: body.postal_code ? sanitizeString(body.postal_code) : "",
+  city: body.city ? sanitizeString(body.city) : "",
+  achat: body.achat ? sanitizeString(body.achat) : "",
+  bien: body.bien ? sanitizeString(body.bien) : "",
+  origine: body.origine ? sanitizeString(body.origine) : "",
+
 })
+
 
 const getProspectInfo = (body) => {
 

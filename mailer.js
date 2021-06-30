@@ -2,8 +2,8 @@
 const nodemailer = require('nodemailer')
 const config = {
   host: 'mail.gandi.net',
-  port: 587,
-
+  port: 465,
+  secure: true,
   auth: {
     user: "noreply@terre-des-arts.fr",
     pass: "QDXNHYn22UaMejC"
@@ -116,23 +116,39 @@ const mailer = (body) => {
   }];
   messages.forEach(message => {
     message.from = '"Terre des arts" noreply@terre-des-arts.fr'
-    transporter.sendMail(message, (error, info) => {
-      if (error) {
-        return console.log(error);
-      }
-      console.log('Message sent: %s', info.messageId);
-    });
+    try {
+      transporter.sendMail(message, (error, info) => {
+        if (error) {
+          throw error;
+        }
+        console.log('Message sent: %s', info.messageId);
+      })
+    } catch (e) {
+      let mailOptions = {
+        from: '"Terre des arts" noreply@terre-des-arts.fr', // sender address
+        to: 'dlegrand.pro@gmail.com', // list of receivers
+        subject: 'Erreur', // Subject line
+        text: e, // plain text body
+        html: '<p>' + e + '</p>' // html body
+      };
+      transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+          return console.log(error);
+        }
+      })
+
+    };
   })
 }
 
 module.exports = mailer
 
-// Generate test SMTP service account from ethereal.email
-// Only needed if you don't have a real mail account for testing
+// // Generate test SMTP service account from ethereal.email
+// // Only needed if you don't have a real mail account for testing
 // module.exports = nodemailer.createTestAccount((err, account) => {
 
 //   // create reusable transporter object using the default SMTP transport
-//   let transporter = nodemailer.createTransport({
+//   let transporter2 = nodemailer.createTransport({
 //     host: 'smtp.ethereal.email',
 //     port: 587,
 //     secure: false, // true for 465, false for other ports
@@ -152,7 +168,7 @@ module.exports = mailer
 //   };
 
 //   // send mail with defined transport object
-//   transporter.sendMail(mailOptions, (error, info) => {
+//   transporter2.sendMail(mailOptions, (error, info) => {
 //     if (error) {
 //       return console.log(error);
 //     }
@@ -162,6 +178,7 @@ module.exports = mailer
 
 //     // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@blurdybloop.com>
 //     // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
-//   });
-// });
 
+//   });
+
+// })

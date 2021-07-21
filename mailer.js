@@ -102,14 +102,8 @@ const mailer = (body) => {
     text: prospectMsg.text,
     html: prospectMsg.html,
   },
-  //  {
-  //   to: body.email,
-  //   subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
-  //   text: conseillerMsg.text,
-  //   html: conseillerMsg.html,
-  // }, 
   {
-    to: "contact@we-associes.com",
+    to: "contact@spycassiopee.fr",
     subject: 'Terre des Arts : Nouveau ' + (body.origine === "performance" ? 'CPL' : 'lead'),
     text: conseillerMsg.text,
     html: conseillerMsg.html,

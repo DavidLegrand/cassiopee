@@ -1,0 +1,13 @@
+.iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.button {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background-color: var(--red) !important;
+  padding: 0.8em 1.6em !important;
+}

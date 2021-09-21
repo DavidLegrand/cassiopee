@@ -1,0 +1,34 @@
+.navbar {
+  justify-content: flex-start !important;
+  background-color: transparent !important;
+  z-index: 888;
+}
+.navbarScrolled {
+  background-color: #ffffff !important;
+}
+.toggler {
+  opacity: 1;
+  background-color: #ffffff99 !important;
+  border-radius: 0.1em !important;
+}
+
+/* .TDALogo {
+  display: none;
+}
+@media (min-width: 992px) {
+  .scrolledTDALogo {
+    position: absolute;
+    right: calc((100vw - 960px) / 2);
+    top: 0;
+    transition: left 0.3s, height 0.3s;
+  }
+}
+
+@media (min-width: 1200px) {
+  .scrolledTDALogo {
+    position: absolute;
+    right: calc((100vw - 1140px) / 2);
+    top: 0;
+    transition: left 0.3s, height 0.3s;
+  }
+} */

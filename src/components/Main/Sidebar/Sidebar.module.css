@@ -1,0 +1,78 @@
+.form_container {
+  background-color: var(--orange);
+  color: var(--beige);
+  position: static;
+  overflow: auto;
+}
+
+.form_text {
+  font-size: 0.8em;
+  line-height: 1.2em;
+}
+
+.TDAColor {
+  margin: 0 auto;
+  display: block;
+}
+.background {
+
+}
+.background::after {
+  content: "";
+  z-index: -1;
+  display: block;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: url("/src/assets/tache2.png");
+  background-size: 104% 114%;
+  opacity: 0.6;
+  background-position: center center;
+  -moz-transform: scaleY(-1);
+  -o-transform: scaleY(-1);
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1);
+  filter: FlipV;
+  -ms-filter: "FlipV";
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  filter: FlipH;
+  -ms-filter: "FlipH";
+}
+@media (min-width: 992px) {
+  .form_container {
+    position: fixed;
+    top: 0px;
+    bottom: 0px;
+    z-index: 1040;
+  }
+  @media (max-height: 800px) {
+    .form_text {
+      font-size: 0.8em;
+      line-height: 1.15em;
+    }
+  }
+  @media (max-height: 720px) {
+    .form_text {
+      font-size: 0.7em;
+      line-height: 1.1em;
+    }
+  }
+  @media (max-height: 700px) {
+    .form_text {
+      font-size: 0.65em;
+      line-height: 1.1em;
+    }
+  }
+}
+
+.row {
+  height: 100%;
+  justify-content: space-between;
+}

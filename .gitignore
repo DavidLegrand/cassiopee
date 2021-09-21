@@ -10,14 +10,13 @@
 /coverage
 
 # dev
-/public
-/src
 .crcf
 .env
 .eslintcache
 jsconfig.json
 README.md
 /images
+mailer.js
 
 # misc
 .DS_Store

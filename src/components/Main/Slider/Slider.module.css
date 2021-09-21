@@ -1,0 +1,41 @@
+.slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
+
+.maquette {
+  box-shadow: inset 0 0 10vh 15vh #ffffff;
+  border-radius: 50vh;
+}
+
+.sliderContainer {
+  position: relative;
+  display: inline-block;
+}
+.maquetteImg {
+  z-index: -1;
+  position: relative;
+  border: none;
+  border-radius: 50vh;
+  padding: 5vh;
+}
+
+.slider {
+  height: 100vh;
+  width: calc((100vw - 1140px) / 2 + 15px + (1140px * 3 / 4));
+}
+
+@media (max-width: 1200px) {
+  .slider {
+    width: calc((100vw - 960px) / 2 + 15px + (960px * 3 / 4));
+  }
+}
+
+@media (max-width: 991px) {
+  .slider {
+    width: 100%;
+  }
+}
